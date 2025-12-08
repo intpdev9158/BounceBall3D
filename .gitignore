@@ -1,0 +1,31 @@
+# 유니티 필수 제외 폴더 (용량이 매우 크고 자동 생성됨)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# 비주얼 스튜디오 코드 설정 파일 (스크린샷에 있는 .vscode 제외용)
+.vscode/
+.vs/
+
+# 유니티가 자동으로 만드는 프로젝트 파일들 (굳이 올릴 필요 없음)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# 윈도우/맥 시스템 파일
+.DS_Store
+Thumbs.db
