@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a76551800038b24686a822638d1d597, type: 2}
+  - {fileID: 2100000, guid: 86fe6bae5ceaa26478b4584b5c7baa96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,4 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175f6008d2bf57f41a62c57d64fd26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileBreak
-  breakDelay: 0.5
