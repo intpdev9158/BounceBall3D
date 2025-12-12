@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class StarMovement : MonoBehaviour
 {
-    [Header("운동 설정")]
-    public float rotateSpeed = 100f; 
-    public float floatSpeed = 2f;    
-    public float floatHeight = 0.25f; 
-    private Vector3 startPos;
+    public float rotateSpeed = 100f;
+    public float floatSpeed = 2f;
+    public float floatHeight = 0.25f;
 
-    // 내 몸통(그림)과 껍데기(충돌)
+    private Vector3 startPos;
     private MeshRenderer meshRenderer;
     private Collider col;
-    private bool isCollected = false; 
+    private bool isCollected = false;
+
+    bool IsInStage()
+        => GameManager.instance != null && GameManager.instance.Mode == GameManager.GameMode.InStage;
 
     void Awake()
     {
@@ -19,19 +20,17 @@ public class StarMovement : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         col = GetComponent<Collider>();
 
-        // 플레이어의 "Reset" 신호를 구독(듣기)합니다.
         PlayerRespawn.OnReset += ResetStar;
     }
 
     void OnDestroy()
     {
-        // 내가 진짜 사라질 때는 구독 해지 (에러 방지)
         PlayerRespawn.OnReset -= ResetStar;
     }
 
     void Update()
     {
-        if (isCollected) return; // 먹힌 상태면 움직이지 않음
+        if (isCollected) return;
 
         transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         float newY = startPos.y + Mathf.Sin(Time.time * floatSpeed) * floatHeight;
@@ -40,26 +39,28 @@ public class StarMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // ✅ StageSelect에서는 먹히면 안 됨
+        if (!IsInStage()) return;
         if (isCollected) return;
 
         if (other.CompareTag("Player"))
         {
-            isCollected = true; 
-            
-            // 점수 올리기
+            isCollected = true;
+
             GameManager.instance.GetStar();
 
-            // ⭐ Destroy 대신 '숨기기' 모드 발동
-            meshRenderer.enabled = false; // 눈에 안 보임
-            col.enabled = false;          // 만져지지 않음
+            meshRenderer.enabled = false;
+            col.enabled = false;
         }
     }
 
-    // "Reset" 신호를 들으면 실행되는 함수
     void ResetStar()
     {
+        // ✅ StageSelect에서 죽을 때 “모든 별 등장” 버그 차단
+        if (!IsInStage()) return;
+
         isCollected = false;
-        meshRenderer.enabled = true; // 다시 보임
-        col.enabled = true;          // 다시 만져짐
+        meshRenderer.enabled = true;
+        col.enabled = true;
     }
 }

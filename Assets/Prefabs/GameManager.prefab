@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4216168829025730792}
   - component: {fileID: 1799857378451213159}
+  - component: {fileID: 7709119583621850368}
+  - component: {fileID: 2669593021066450151}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,3 +48,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   totalStars: 0
   collectedStars: 0
+  stageSelectSceneName: StageSelect
+--- !u!114 &7709119583621850368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589414578092250140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f3e8ac09dcf0c46a814b0828b045a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StageProgress
+--- !u!114 &2669593021066450151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589414578092250140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03cc824c5db17f4bb17defa27af22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  fallThreshold: -10

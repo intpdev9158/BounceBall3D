@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6904479867091730152}
   - component: {fileID: 5602102808832474707}
   - component: {fileID: -5379996633201438223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile_JumpPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileJumpPad
   heightMultiplier: 2
+  distanceMultiplier: 1.6666666
 --- !u!1 &2692806365219876720
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ GameObject:
   - component: {fileID: 488412297139548962}
   - component: {fileID: 2875202000365913298}
   - component: {fileID: 6788847163112278529}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 6035274941273305510}
   - component: {fileID: 4523123515214016958}
   - component: {fileID: 19736134932080647}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +366,7 @@ GameObject:
   - component: {fileID: 3371351801712612024}
   - component: {fileID: 5741355424906358938}
   - component: {fileID: 7203181462329124980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +478,7 @@ GameObject:
   - component: {fileID: 5555166789552578465}
   - component: {fileID: 3639219189823629508}
   - component: {fileID: 3389891460734511877}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

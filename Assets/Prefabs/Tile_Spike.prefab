@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5917309882607260034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tile_Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8200020441261962524}
   - component: {fileID: 3838031937903192235}
   - component: {fileID: 7247637737289004292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpikeBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 8097067063410288649}
   - component: {fileID: 3967636281032108134}
   - component: {fileID: 7703987104415416503}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpikeTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
